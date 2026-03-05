@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>APMP Liberty Chapter</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Page wrapper to center content and set a max width -->
+  <div class="page">
+    <!-- Header contains the logo and navigation bar -->
+    <header class="site-header">
+      <!-- Logo area now uses the Liberty APMP logo image -->
+      <div class="logo">
+        <!-- Replace the alt text if you prefer different wording -->
+        <img src="LibertyAPMP-LOGO_vFINAL.png" alt="APMP Liberty Chapter logo" />
+      </div>
+      <!-- Simple horizontal navigation bar with About dropdown -->
+      <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <!-- About item with dropdown to sub-pages -->
+        <div class="nav-item nav-has-dropdown">
+          <a href="about.html" class="nav-link-main">About</a>
+          <div class="nav-dropdown">
+            <a href="about.html">Our Vision</a>
+            <a href="#">Board of Directors</a>
+            <a href="#">Chapter Bylaws</a>
+          </div>
+        </div>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <!-- Main content of the page -->
+    <main>
+      <!-- Welcome message under the header -->
+      <section class="welcome">
+        <h1>Welcome to the APMP Liberty Chapter!</h1>
+      </section>
+      <!-- Photo carousel area -->
+      <section class="carousel-section">
+        <!-- Container that holds all slides -->
+        <div class="carousel" id="carousel">
+          <!-- Each slide now shows one of the chapter photos -->
+          <div class="slide active">
+            <img src="Carousel Photos/SliderImage1-Philadelphia-Skyline.jpg"
+                 alt="Philadelphia skyline - APMP Liberty Chapter region" />
+          </div>
+          <div class="slide">
+            <img src="Carousel Photos/SliderImage2-NYC-Skyline.jpg"
+                 alt="New York City skyline - APMP Liberty Chapter region" />
+          </div>
+          <div class="slide">
+            <img src="Carousel Photos/SliderImage3-Lighthouse.jpg"
+                 alt="Lighthouse scene - APMP Liberty Chapter region" />
+          </div>
+          <div class="slide">
+            <img src="Carousel Photos/SliderImage4-Newark-Skyline.jpg"
+                 alt="Newark skyline - APMP Liberty Chapter region" />
+          </div>
+        </div>
+        <!-- Previous / Next buttons to move through the slides (simple arrow icons) -->
+        <div class="carousel-controls">
+          <!-- Left arrow for previous slide -->
+          <button id="prevButton" type="button" aria-label="Previous slide">
+            &#8592;
+          </button>
+          <!-- Right arrow for next slide -->
+          <button id="nextButton" type="button" aria-label="Next slide">
+            &#8594;
+          </button>
+        </div>
+      </section>
+      <!-- Text description section under the carousel -->
+      <section class="description">
+        <p>
+          Chartered in 2007, the APMP Liberty Chapter serves members in Connecticut, New Jersey,
+          New York, and Pennsylvania, and provides area proposal professionals a forum for
+          education, information exchange, and networking. Due to the large geographic area
+          served, the chapter holds both virtual and in-person events. The group meets at least
+          quarterly, with state coordinators organizing local, smaller, in-person meetings
+          periodically.
+        </p>
+      </section>
+    </main>
+    <!-- Footer with chapter info and contact details -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-address">
+          2389 Main St, Glastonbury, CT 06033
+        </span>
+        <span class="footer-separator">•</span>
+        <span class="footer-phone">
+          (856) 318-2119
+        </span>
+        <span class="footer-separator">•</span>
+        <span class="footer-copy">
+          &copy; 2026 APMP Liberty Chapter
+        </span>
+      </div>
+    </footer>
+  </div>
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

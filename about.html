@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About – APMP Liberty Chapter</title>
+  <!-- Link to the shared stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Page wrapper to center content and set a max width -->
+  <div class="page">
+    <!-- Header contains the logo and navigation bar -->
+    <header class="site-header">
+      <!-- Logo area uses the Liberty APMP logo image -->
+      <div class="logo">
+        <img src="LibertyAPMP-LOGO_vFINAL.png" alt="APMP Liberty Chapter logo" />
+      </div>
+      <!-- Navigation bar with About dropdown -->
+      <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <!-- About item with dropdown for sub-pages -->
+        <div class="nav-item nav-has-dropdown">
+          <a href="about.html" class="nav-link-main">About</a>
+          <div class="nav-dropdown">
+            <!-- Our Vision is the current sub-page -->
+            <a href="about.html" class="active-subpage">Our Vision</a>
+            <a href="#">Board of Directors</a>
+            <a href="#">Chapter Bylaws</a>
+          </div>
+        </div>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main content of the About page -->
+    <main>
+      <!-- Our Vision section -->
+      <section class="about-hero">
+        <h1>Our Vision</h1>
+        <p>
+          We strive to connect and empower our region’s APMP members by providing virtual and
+          in-person development opportunities that add value to capture and proposal professionals.
+        </p>
+      </section>
+
+      
+        <!--Highlights carousel under Our Vision.
+        This section is commented out for now and can be re-enabled later.-->
+
+      <section class="carousel-section highlights-section">
+        <h2>Our favorite highlights from the last year:</h2>
+        <div class="carousel">
+          <div class="slide active">
+            <img src="thankyoumembers.png"
+                 alt="Thank you members for a great 2025!" />
+          </div>
+          <div class="slide">
+            <img src="thankyoumembers.png"
+                 alt="Thank you members for a great 2025!" />
+          </div>
+          <div class="slide">
+            <img src="thankyoumembers.png"
+                 alt="Thank you members for a great 2025!" />
+          </div>
+          <div class="slide">
+            <img src="thankyoumembers.png"
+                 alt="Thank you members for a great 2025! />
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevButton" type="button" aria-label="Previous highlight">
+            &#8592;
+          </button>
+          <button id="nextButton" type="button" aria-label="Next highlight">
+            &#8594;
+          </button>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Shared footer with chapter info and contact details -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-address">
+          2389 Main St, Glastonbury, CT 06033
+        </span>
+        <span class="footer-separator">•</span>
+        <span class="footer-phone">
+          (856) 318-2119
+        </span>
+        <span class="footer-separator">•</span>
+        <span class="footer-copy">
+          &copy; 2026 APMP Liberty Chapter
+        </span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript is shared, but will safely do nothing on this page -->
+  <script src="script.js"></script>
+</body>
+</html>
+
