@@ -1,0 +1,337 @@
+/* 
+  Basic reset and global styles
+  These remove default browser margins and set a simple font.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  /* Dark grey text for a professional look */
+  color: #333333;
+  /* Keep the overall page background plain white */
+  background-color: #ffffff;
+}
+
+/* 
+  Page wrapper to keep content centered and narrow enough for readability.
+*/
+.page {
+  max-width: 1000px;
+  margin: 16px auto 32px;
+  padding: 16px 12px 32px;
+}
+
+/* 
+  Header with logo and navigation bar.
+  Mobile-first: stack items vertically by default.
+*/
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Logo area around the image (no visible box border now). */
+.logo {
+  padding: 20px 30px;
+  min-width: 120px;
+  background-color: transparent;
+  /* Center the logo image inside the box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make sure the logo image scales nicely and stays within the box. */
+.logo img {
+  max-width: 100%;
+  max-height: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 
+  Navigation bar.
+  The bar stretches horizontally and holds simple text links.
+*/
+.nav-bar {
+  /* Make the nav bar stretch across the full page width inside the header */
+  flex: 0 0 100%;
+  border: 1px solid #d0d3d8;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  /* Keep all nav items vertically centered on the same line */
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Wrapper for nav items that contain dropdowns. */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Base styles for links inside dropdown containers. */
+.nav-item > a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 2px 0;
+}
+
+/* Dropdown panel for About sub-pages (hidden by default). */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  min-width: 170px;
+  background-color: #ffffff;
+  border: 1px solid #d0d3d8;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.nav-dropdown a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-dropdown a:hover {
+  background-color: #f5f5f7;
+}
+
+/* Show dropdown when hovering or focusing within the parent item. */
+.nav-has-dropdown:hover .nav-dropdown,
+.nav-has-dropdown:focus-within .nav-dropdown {
+  display: flex;
+}
+
+/* Optional subtle underline to show the current About sub-page. */
+.active-subpage {
+  font-weight: 600;
+}
+
+.nav-bar a:hover {
+  color: #000000;
+}
+
+/* Welcome text directly under the header. */
+.welcome {
+  text-align: center;
+  /* Reduced top margin to bring the heading closer to the nav bar */
+  margin: 15px 0 25px;
+}
+
+.welcome h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* 
+  Carousel section styled as a simple rectangle.
+  The height is fixed for now and can be adjusted later.
+*/
+.carousel-section {
+  margin-bottom: 25px;
+}
+
+/* Simple styling for the About page "Our Vision" section. */
+.about-hero {
+  padding: 24px 10px 32px;
+}
+
+.about-hero h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.about-hero p {
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading above the highlights carousel on the About page. */
+.highlights-section h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Outer box of the carousel to match the wireframe rectangle. */
+.carousel {
+  border: 1px solid #d0d3d8;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  /* Slightly shorter on small screens */
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Main content area below the nav bar. */
+main {
+  margin-top: 10px;
+  padding-top: 20px;
+  /* Plain white background instead of a gradient */
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Each slide fills the carousel area. */
+.slide {
+  min-width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The currently active slide is displayed as a flex box. */
+.slide.active {
+  display: flex;
+}
+
+/* Make carousel images fill the slide while keeping their proportions. */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Simple strip of buttons under the carousel. */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  /* Make buttons compact, circular arrow icons */
+  width: 32px;
+  height: 32px;
+  border: 1px solid #c2c5cc;
+  background-color: #f5f5f7;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-controls button:hover {
+  background-color: #e1e3e8;
+}
+
+/* 
+  Description text at the bottom.
+  Kept narrow and easy to read.
+*/
+.description {
+  margin-top: 25px;
+  /* Slightly larger body text for readability */
+  font-size: 1.05rem;
+  text-align: left;
+  /* Let the text stretch the full width of the content area */
+  max-width: none;
+  /* White background behind the description text */
+  background-color: #ffffff;
+  padding: 12px 10px;
+  border-radius: 6px;
+}
+
+/* Footer as a dark blue bar at the bottom. */
+.site-footer {
+  margin-top: 35px;
+  font-size: 0.85rem;
+  background-color: #003865; /* Approximate Liberty APMP blue */
+  color: #ffffff;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-separator {
+  opacity: 0.7;
+}
+
+.footer-copy {
+  opacity: 1;
+}
+
+/* 
+  Larger screens: place logo and nav bar in a more horizontal layout.
+*/
+@media (min-width: 700px) {
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-bar {
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+  }
+
+  /* Make the logo image slightly larger on wider screens */
+  .logo img {
+    max-height: 100px;
+  }
+
+  .carousel {
+    height: 260px;
+  }
+
+  .page {
+    margin: 30px auto 40px;
+    padding: 20px 15px 40px;
+  }
+}
