@@ -184,6 +184,161 @@ body {
   text-align: center;
 }
 
+/* Simple styling for the Board of Directors page hero. */
+.board-hero {
+  padding: 24px 10px 32px;
+  text-align: center;
+}
+
+.board-hero h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.board-hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 12px;
+}
+
+/* Container for the Board role descriptions. */
+.board-roles {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding: 0 10px 10px;
+}
+
+.board-roles h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.board-role {
+  margin-top: 20px;
+}
+
+.board-role h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.board-role h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* Ensure paragraphs and bullets share the same left edge. */
+.board-roles p {
+  margin-bottom: 6px;
+}
+
+.board-roles ul {
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 1.2rem; /* keeps bullets just slightly indented from text edge */
+}
+
+.board-roles li {
+  margin-bottom: 4px;
+}
+
+/* Layout for Chapter Bylaws page content. */
+.bylaws {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding: 24px 10px 32px;
+}
+
+.bylaws h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.bylaws h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.bylaws h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.bylaws p {
+  margin-bottom: 8px;
+}
+
+.bylaws ul {
+  margin-left: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Simple Events page hero. */
+.events-hero {
+  padding: 24px 10px 32px;
+  text-align: center;
+}
+
+.events-hero h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.events-hero p {
+  font-size: 1.1rem;
+}
+
+/* Contact page layout. */
+.contact-hero {
+  max-width: 700px;
+  margin: 0 auto 32px;
+  padding: 24px 10px 32px;
+}
+
+.contact-hero h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-block {
+  margin-top: 16px;
+}
+
+.contact-block h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-block p {
+  font-size: 1rem;
+}
+
+.contact-block a {
+  color: #003865;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
 /* Heading above the highlights carousel on the About page. */
 .highlights-section h2 {
   font-size: 1.4rem;
