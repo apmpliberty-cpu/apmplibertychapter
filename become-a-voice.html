@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Become a Voice of Liberty – APMP Liberty Chapter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="logo">
+        <img src="LibertyAPMP-LOGO_vFINAL.png" alt="APMP Liberty Chapter logo" />
+      </div>
+      <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <div class="nav-item nav-has-dropdown">
+          <a href="about.html" class="nav-link-main">About</a>
+          <div class="nav-dropdown">
+            <a href="about.html">Our Vision</a>
+            <a href="board.html">Board of Directors</a>
+            <a href="bylaws.html">Chapter Bylaws</a>
+          </div>
+        </div>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="become-a-voice.html" class="active-subpage">Become a Voice</a>
+        <a href="https://www.apmp.org/Web/Web/Membership/Join_APMP.aspx?hkey=03983fb4-1193-451e-949a-8f218b2d128f"
+           target="_blank" rel="noopener noreferrer">Join APMP</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="voice-hero">
+        <h1>Become a Voice of Liberty</h1>
+        <p class="voice-intro">
+          We’d love for you to share your insights with our members. If you’re interested in presenting a webinar for our chapter, please complete the form fields below.
+        </p>
+
+        <form id="voice-form" class="voice-form" novalidate>
+          <div class="form-row">
+            <label for="email">What is your email address? <span class="required">*</span></label>
+            <input type="email" id="email" name="Email address" required />
+          </div>
+
+          <div class="form-row">
+            <label for="fullname">What is your first and last name? <span class="required">*</span></label>
+            <input type="text" id="fullname" name="First and last name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">What is your phone number? <span class="required">*</span></label>
+            <input type="tel" id="phone" name="Phone number" required />
+          </div>
+
+          <div class="form-row">
+            <label>Are you a member of APMP? <span class="required">*</span></label>
+            <div class="form-options">
+              <label class="option-label">
+                <input type="radio" name="APMP member" value="Yes" required /> Yes
+              </label>
+              <label class="option-label">
+                <input type="radio" name="APMP member" value="No" /> No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="event-title">What is the title of the proposed event / webinar? <span class="required">*</span></label>
+            <input type="text" id="event-title" name="Title of proposed event / webinar" required />
+          </div>
+
+          <div class="form-row">
+            <label for="overview">What is the overview or summary for the proposed event / webinar? <span class="required">*</span></label>
+            <textarea id="overview" name="Overview or summary for proposed event / webinar" rows="4" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="takeaways">What are the audience key takeaways for the proposed event / webinar? <span class="required">*</span></label>
+            <textarea id="takeaways" name="Audience key takeaways" rows="4" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="audience">Who is the target audience for the proposed event / webinar? <span class="required">*</span></label>
+            <textarea id="audience" name="Target audience" rows="3" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="dates">Provide up to three preferred dates and times for the proposed event / webinar <span class="required">*</span></label>
+            <textarea id="dates" name="Preferred dates and times (up to three)" rows="3" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="linkedin">What is the URL for your LinkedIn profile?</label>
+            <input type="url" id="linkedin" name="LinkedIn profile URL" placeholder="https://" />
+          </div>
+
+          <div class="form-row">
+            <label for="twitter">What is the URL for your Twitter profile?</label>
+            <input type="url" id="twitter" name="Twitter profile URL" placeholder="https://" />
+          </div>
+
+          <div class="form-row">
+            <label for="other-social">Other social media / web profile URL</label>
+            <input type="url" id="other-social" name="Other social media / web profile URL" placeholder="https://" />
+          </div>
+
+          <div class="form-row">
+            <label>What is the suggested format for your event? <span class="required">*</span> Check all that apply</label>
+            <div class="form-options form-checkboxes">
+              <label class="option-label">
+                <input type="checkbox" name="Format" value="Lecture-style delivery or presentation" /> Lecture-style delivery or presentation
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="Format" value="Facilitated discussion / workshop" /> Facilitated discussion / workshop
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="Format" value="Panel or expert speaker" /> Panel or expert speaker
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="Format" value="Interactive or scenario-based session" /> Interactive or scenario-based session
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>What is the suggested delivery method for your event? <span class="required">*</span> Check all that apply</label>
+            <div class="form-options form-checkboxes">
+              <label class="option-label">
+                <input type="checkbox" name="Delivery" value="Webinar" /> Webinar
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="Delivery" value="Physical" /> Physical
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="anything-else">Is there anything else you'd like to add that hasn't been covered above?</label>
+            <textarea id="anything-else" name="Anything else to add" rows="4"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label>Are you happy for a member of the events team to contact you about your idea? <span class="required">*</span> Check one</label>
+            <div class="form-options">
+              <label class="option-label">
+                <input type="radio" name="Events team contact" value="Yes" required /> Yes
+              </label>
+              <label class="option-label">
+                <input type="radio" name="Events team contact" value="No" /> No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-submit">Submit</button>
+            <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-address">2389 Main St, Glastonbury, CT 06033</span>
+        <span class="footer-separator">•</span>
+        <span class="footer-phone">(856) 318-2119</span>
+        <span class="footer-separator">•</span>
+        <span class="footer-copy">&copy; 2026 APMP Liberty Chapter</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("voice-form");
+      var cancelBtn = document.getElementById("cancelBtn");
+      if (!form || !cancelBtn) return;
+
+      cancelBtn.addEventListener("click", function () {
+        form.reset();
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var formatChecked = form.querySelectorAll('input[name="Format"]:checked').length;
+        var deliveryChecked = form.querySelectorAll('input[name="Delivery"]:checked').length;
+        if (formatChecked === 0) {
+          alert("Please select at least one suggested format for your event.");
+          return;
+        }
+        if (deliveryChecked === 0) {
+          alert("Please select at least one suggested delivery method.");
+          return;
+        }
+
+        var bodyLines = [];
+
+        function addLine(label, value) {
+          if (value !== undefined && value !== "") bodyLines.push(label + ": " + value);
+        }
+
+        addLine("Email address", form.querySelector("#email").value.trim());
+        addLine("First and last name", form.querySelector("#fullname").value.trim());
+        addLine("Phone number", form.querySelector("#phone").value.trim());
+
+        var memberRadio = form.querySelector('input[name="APMP member"]:checked');
+        addLine("Are you a member of APMP?", memberRadio ? memberRadio.value : "");
+
+        addLine("Title of proposed event / webinar", form.querySelector("#event-title").value.trim());
+        addLine("Overview or summary for proposed event / webinar", form.querySelector("#overview").value.trim());
+        addLine("Audience key takeaways", form.querySelector("#takeaways").value.trim());
+        addLine("Target audience", form.querySelector("#audience").value.trim());
+        addLine("Preferred dates and times (up to three)", form.querySelector("#dates").value.trim());
+
+        addLine("LinkedIn profile URL", form.querySelector("#linkedin").value.trim());
+        addLine("Twitter profile URL", form.querySelector("#twitter").value.trim());
+        addLine("Other social media / web profile URL", form.querySelector("#other-social").value.trim());
+
+        var formats = [];
+        form.querySelectorAll('input[name="Format"]:checked').forEach(function (cb) { formats.push(cb.value); });
+        if (formats.length) addLine("Suggested format for event", formats.join("; "));
+
+        var delivery = [];
+        form.querySelectorAll('input[name="Delivery"]:checked').forEach(function (cb) { delivery.push(cb.value); });
+        if (delivery.length) addLine("Suggested delivery method", delivery.join("; "));
+
+        addLine("Anything else to add", form.querySelector("#anything-else").value.trim());
+
+        var contactRadio = form.querySelector('input[name="Events team contact"]:checked');
+        addLine("Happy for events team to contact?", contactRadio ? contactRadio.value : "");
+
+        var body = bodyLines.join("\r\n");
+        var subject = "Become a Voice of Liberty – Webinar Proposal";
+        var mailto = "mailto:apmp.liberty@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        window.location.href = mailto;
+      });
+    })();
+  </script>
+</body>
+</html>

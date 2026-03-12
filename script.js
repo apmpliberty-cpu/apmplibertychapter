@@ -64,3 +64,36 @@ if (slides.length > 0 && prevButton && nextButton) {
   }, autoAdvanceDelayMs);
 }
 
+/*
+  Gentle hover delay for the About dropdown.
+  This keeps the menu open briefly as the mouse moves toward Board/Bylaws links.
+*/
+const dropdownParents = document.querySelectorAll(".nav-item.nav-has-dropdown");
+
+if (dropdownParents.length > 0) {
+  dropdownParents.forEach((parent) => {
+    const dropdown = parent.querySelector(".nav-dropdown");
+    if (!dropdown) return;
+
+    let hideTimeout;
+
+    const showDropdown = () => {
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+      dropdown.style.display = "flex";
+    };
+
+    const scheduleHide = () => {
+      hideTimeout = setTimeout(() => {
+        dropdown.style.display = "none";
+      }, 250); // adjust delay as needed
+    };
+
+    parent.addEventListener("mouseenter", showDropdown);
+    parent.addEventListener("mouseleave", scheduleHide);
+    dropdown.addEventListener("mouseenter", showDropdown);
+    dropdown.addEventListener("mouseleave", scheduleHide);
+  });
+}

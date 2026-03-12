@@ -1,7 +1,10 @@
-/* 
-  Basic reset and global styles
-  These remove default browser margins and set a simple font.
+/*
+  APMP Liberty Chapter – Cosmetic styling inspired by modern Lovable-style polish.
+  Structure and content unchanged; logo and features preserved.
 */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* Basic reset and global styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,15 +12,14 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  /* Dark grey text for a professional look */
-  color: #333333;
-  /* Keep the overall page background plain white */
-  background-color: #ffffff;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #1a1d24;
+  background: linear-gradient(180deg, #f0f4f9 0%, #e8eef5 30%, #ffffff 100%);
+  min-height: 100vh;
 }
 
-/* 
+/*
   Page wrapper to keep content centered and narrow enough for readability.
 */
 .page {
@@ -26,7 +28,7 @@ body {
   padding: 16px 12px 32px;
 }
 
-/* 
+/*
   Header with logo and navigation bar.
   Mobile-first: stack items vertically by default.
 */
@@ -38,18 +40,16 @@ body {
   margin-bottom: 24px;
 }
 
-/* Logo area around the image (no visible box border now). */
+/* Logo area – prominent, no border; our logo stays central. */
 .logo {
   padding: 20px 30px;
   min-width: 120px;
   background-color: transparent;
-  /* Center the logo image inside the box */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Make sure the logo image scales nicely and stays within the box. */
 .logo img {
   max-width: 100%;
   max-height: 80px;
@@ -58,123 +58,131 @@ body {
   margin: 0 auto;
 }
 
-/* 
-  Navigation bar.
-  The bar stretches horizontally and holds simple text links.
+/*
+  Navigation bar – dark blue, bold white text, full width to match content below.
 */
 .nav-bar {
-  /* Make the nav bar stretch across the full page width inside the header */
-  flex: 0 0 100%;
-  border: 1px solid #d0d3d8;
-  padding: 10px 15px;
+  width: 100%;
+  align-self: stretch;
+  flex: 0 0 auto;
+  border: none;
+  padding: 12px 20px;
   display: flex;
   justify-content: center;
-  /* Keep all nav items vertically centered on the same line */
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background: #003865;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 56, 101, 0.25);
 }
 
 .nav-bar a {
   text-decoration: none;
-  color: #333333;
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 700;
   font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Wrapper for nav items that contain dropdowns. */
 .nav-item {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
-/* Base styles for links inside dropdown containers. */
 .nav-item > a {
   text-decoration: none;
-  color: #333333;
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 700;
   font-size: 0.95rem;
-  padding: 2px 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Dropdown panel for About sub-pages (hidden by default). */
+/* Dropdown panel – dark blue to match nav, white text */
 .nav-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
   margin-top: 8px;
-  min-width: 170px;
-  background-color: #ffffff;
-  border: 1px solid #d0d3d8;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  min-width: 200px;
+  background: #003865;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   display: none;
   flex-direction: column;
   z-index: 10;
+  overflow: hidden;
 }
 
 .nav-dropdown a {
-  padding: 8px 12px;
+  padding: 10px 16px;
   text-decoration: none;
-  color: #333333;
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 600;
   font-size: 0.9rem;
   white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-dropdown a:hover {
-  background-color: #f5f5f7;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
-/* Show dropdown when hovering or focusing within the parent item. */
 .nav-has-dropdown:hover .nav-dropdown,
 .nav-has-dropdown:focus-within .nav-dropdown {
   display: flex;
 }
 
-/* Optional subtle underline to show the current About sub-page. */
 .active-subpage {
-  font-weight: 600;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-bar a:hover {
-  color: #000000;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Welcome text directly under the header. */
+/* Welcome text directly under the header */
 .welcome {
   text-align: center;
-  /* Reduced top margin to bring the heading closer to the nav bar */
   margin: 15px 0 25px;
 }
 
 .welcome h1 {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #003865;
+  letter-spacing: -0.02em;
 }
 
-/* 
-  Carousel section styled as a simple rectangle.
-  The height is fixed for now and can be adjusted later.
+/*
+  Carousel section – refined card look
 */
 .carousel-section {
   margin-bottom: 25px;
 }
 
-/* Simple styling for the About page "Our Vision" section. */
+/* About page "Our Vision" section */
 .about-hero {
   padding: 24px 10px 32px;
 }
 
 .about-hero h1 {
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
   text-align: center;
+  color: #003865;
+  letter-spacing: -0.02em;
 }
 
 .about-hero p {
@@ -182,9 +190,10 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  color: #374151;
 }
 
-/* Simple styling for the Board of Directors page hero. */
+/* Board of Directors page hero */
 .board-hero {
   padding: 24px 10px 32px;
   text-align: center;
@@ -192,19 +201,20 @@ body {
 
 .board-hero h1 {
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
+  color: #003865;
+  letter-spacing: -0.02em;
 }
 
 .board-hero img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 56, 101, 0.12);
   margin-top: 12px;
 }
 
-/* Container for the Board role descriptions. */
 .board-roles {
   max-width: 900px;
   margin: 0 auto 32px;
@@ -213,9 +223,10 @@ body {
 
 .board-roles h2 {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
   text-align: left;
+  color: #003865;
 }
 
 .board-role {
@@ -226,6 +237,7 @@ body {
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 6px;
+  color: #1a1d24;
 }
 
 .board-role h4 {
@@ -233,24 +245,26 @@ body {
   font-weight: 600;
   margin-top: 8px;
   margin-bottom: 4px;
+  color: #374151;
 }
 
-/* Ensure paragraphs and bullets share the same left edge. */
 .board-roles p {
   margin-bottom: 6px;
+  color: #374151;
 }
 
 .board-roles ul {
   list-style-position: outside;
   margin-left: 0;
-  padding-left: 1.2rem; /* keeps bullets just slightly indented from text edge */
+  padding-left: 1.2rem;
 }
 
 .board-roles li {
   margin-bottom: 4px;
+  color: #374151;
 }
 
-/* Layout for Chapter Bylaws page content. */
+/* Chapter Bylaws page content */
 .bylaws {
   max-width: 900px;
   margin: 0 auto 32px;
@@ -259,9 +273,11 @@ body {
 
 .bylaws h1 {
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
   text-align: left;
+  color: #003865;
+  letter-spacing: -0.02em;
 }
 
 .bylaws h2 {
@@ -269,6 +285,7 @@ body {
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 8px;
+  color: #003865;
 }
 
 .bylaws h3 {
@@ -276,18 +293,21 @@ body {
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 4px;
+  color: #1a1d24;
 }
 
 .bylaws p {
   margin-bottom: 8px;
+  color: #374151;
 }
 
 .bylaws ul {
   margin-left: 1.2rem;
   margin-bottom: 8px;
+  color: #374151;
 }
 
-/* Simple Events page hero. */
+/* Events page hero */
 .events-hero {
   padding: 24px 10px 32px;
   text-align: center;
@@ -295,15 +315,18 @@ body {
 
 .events-hero h1 {
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
+  color: #003865;
+  letter-spacing: -0.02em;
 }
 
 .events-hero p {
   font-size: 1.1rem;
+  color: #374151;
 }
 
-/* Contact page layout. */
+/* Contact page layout */
 .contact-hero {
   max-width: 700px;
   margin: 0 auto 32px;
@@ -312,8 +335,10 @@ body {
 
 .contact-hero h1 {
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
+  color: #003865;
+  letter-spacing: -0.02em;
 }
 
 .contact-block {
@@ -324,53 +349,203 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 4px;
+  color: #1a1d24;
 }
 
 .contact-block p {
   font-size: 1rem;
+  color: #374151;
 }
 
 .contact-block a {
   color: #003865;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 .contact-block a:hover {
   text-decoration: underline;
+  color: #002244;
 }
 
-/* Heading above the highlights carousel on the About page. */
+/* Become a Voice of Liberty – form page */
+.voice-hero {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  padding: 24px 10px 32px;
+}
+
+.voice-hero h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #003865;
+  letter-spacing: -0.02em;
+}
+
+.voice-intro {
+  font-size: 1.05rem;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+.voice-form .form-row {
+  margin-bottom: 18px;
+}
+
+.voice-form label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1d24;
+  margin-bottom: 6px;
+}
+
+.voice-form .required {
+  color: #b91c1c;
+}
+
+.voice-form input[type="text"],
+.voice-form input[type="email"],
+.voice-form input[type="tel"],
+.voice-form select,
+.voice-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1a1d24;
+  border: 1px solid #c2c5cc;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.voice-form input:focus,
+.voice-form select:focus,
+.voice-form textarea:focus {
+  outline: none;
+  border-color: #003865;
+}
+
+.voice-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.voice-form .form-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.voice-form .form-checkboxes {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.voice-form .option-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.voice-form .option-label input {
+  margin: 0;
+}
+
+.voice-form .form-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.voice-form .checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.voice-form .checkbox-label input {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.voice-form .form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.voice-form .btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.voice-form .btn-submit {
+  background: #003865;
+  color: #fff;
+}
+
+.voice-form .btn-submit:hover {
+  background: #002244;
+}
+
+.voice-form .btn-cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.voice-form .btn-cancel:hover {
+  background: #d1d5db;
+}
+
+/* Highlights section heading */
 .highlights-section h2 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 16px;
   text-align: center;
+  color: #003865;
 }
 
-/* Outer box of the carousel to match the wireframe rectangle. */
+/* Carousel – softer, modern card */
 .carousel {
-  border: 1px solid #d0d3d8;
+  border: none;
   background-color: #ffffff;
   position: relative;
   width: 100%;
-  /* Slightly shorter on small screens */
-  height: 220px;
+  height: 280px;
   overflow: hidden;
   display: flex;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 56, 101, 0.1);
 }
 
-/* Main content area below the nav bar. */
+/* Main content area */
 main {
   margin-top: 10px;
   padding-top: 20px;
-  /* Plain white background instead of a gradient */
-  background-color: #ffffff;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 24px 16px 32px;
+  box-shadow: 0 4px 20px rgba(0, 56, 101, 0.06);
 }
 
-/* Each slide fills the carousel area. */
 .slide {
   min-width: 100%;
   display: none;
@@ -378,73 +553,73 @@ main {
   justify-content: center;
 }
 
-/* The currently active slide is displayed as a flex box. */
 .slide.active {
   display: flex;
 }
 
-/* Make carousel images fill the slide while keeping their proportions. */
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Simple strip of buttons under the carousel. */
+/* Carousel controls – pill-style buttons */
 .carousel-controls {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .carousel-controls button {
-  /* Make buttons compact, circular arrow icons */
-  width: 32px;
-  height: 32px;
-  border: 1px solid #c2c5cc;
-  background-color: #f5f5f7;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #003865;
+  color: #ffffff;
   cursor: pointer;
   font-size: 1.1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 56, 101, 0.25);
 }
 
 .carousel-controls button:hover {
-  background-color: #e1e3e8;
+  background: #002244;
+  transform: scale(1.05);
 }
 
-/* 
-  Description text at the bottom.
-  Kept narrow and easy to read.
+/*
+  Description text at the bottom
 */
 .description {
   margin-top: 25px;
-  /* Slightly larger body text for readability */
   font-size: 1.05rem;
   text-align: left;
-  /* Let the text stretch the full width of the content area */
   max-width: none;
-  /* White background behind the description text */
-  background-color: #ffffff;
+  background: transparent;
   padding: 12px 10px;
   border-radius: 6px;
+  color: #374151;
 }
 
-/* Footer as a dark blue bar at the bottom. */
+/* Footer – Liberty blue bar, refined */
 .site-footer {
   margin-top: 35px;
   font-size: 0.85rem;
-  background-color: #003865; /* Approximate Liberty APMP blue */
+  background: linear-gradient(135deg, #003865 0%, #002244 100%);
   color: #ffffff;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 56, 101, 0.15);
 }
 
 .footer-inner {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 14px 16px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px 12px;
@@ -453,21 +628,20 @@ main {
 }
 
 .footer-separator {
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .footer-copy {
   opacity: 1;
 }
 
-/* 
-  Larger screens: place logo and nav bar in a more horizontal layout.
+/*
+  Larger screens: logo stays centered above nav; slightly larger logo and carousel
 */
 @media (min-width: 700px) {
   .site-header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
   }
 
   .nav-bar {
@@ -476,13 +650,12 @@ main {
     flex-wrap: nowrap;
   }
 
-  /* Make the logo image slightly larger on wider screens */
   .logo img {
     max-height: 100px;
   }
 
   .carousel {
-    height: 260px;
+    height: 340px;
   }
 
   .page {
