@@ -523,6 +523,19 @@ body {
   color: #003865;
 }
 
+.highlights-image {
+  margin-top: 8px;
+}
+
+.highlights-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 56, 101, 0.1);
+}
+
 /* Carousel – softer, modern card */
 .carousel {
   border: none;
