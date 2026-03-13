@@ -658,6 +658,58 @@ main {
   border: 0;
 }
 
+/* Home page new member spotlight */
+.member-spotlight {
+  margin-top: 32px;
+}
+
+.member-spotlight h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #003865;
+  letter-spacing: -0.01em;
+}
+
+.member-spotlight-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 56, 101, 0.08);
+}
+
+.member-photo img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 56, 101, 0.12);
+}
+
+.member-details p {
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+  color: #374151;
+}
+
+@media (min-width: 700px) {
+  .member-spotlight-inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .member-photo {
+    flex: 0 0 auto;
+  }
+
+  .member-details {
+    flex: 1;
+  }
+}
+
 /* Footer – Liberty blue bar, refined */
 .site-footer {
   margin-top: 35px;
